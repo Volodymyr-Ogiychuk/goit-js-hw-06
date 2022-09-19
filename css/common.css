@@ -16,6 +16,7 @@ body {
 input {
   padding: 8px;
   font: inherit;
+  
 }
 
 button {
@@ -23,12 +24,4 @@ button {
   cursor: pointer;
 }
 
-.image__situation {
-  display: flex;
-  flex-direction: column;
-  
-}
 
-.image__situation:not(:last-child) {
-  margin-bottom: 20px;
-}

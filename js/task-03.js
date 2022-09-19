@@ -17,77 +17,17 @@ const images = [
 const listImages = document.querySelector(".gallery");
 
 const elements = images.map(picture => {
-  listImages.insertAdjacentHTML('beforeend', `<img class="image__situation" src= "${picture.url}" alt="${picture.alt}" width=650px>`);
-  });
-
-
-
   
-    // const imageEl = document.createElement("img");
-    // imageEl.src = picture.url;
-    // imageEl.alt = picture.alt;
-    // imageEl.style.width = '650px';
-    // imageEl.style.margin = '20px';
-    
-    // return imageEl;
+  listImages.insertAdjacentHTML('beforeend', `<li class="gallery-item"><img src= "${picture.url}" alt="${picture.alt}" width=650px></li>`);
   
-// listImages.append(...elements);
+});
 
+const item = document.querySelectorAll('.gallery-item');
+item.forEach((elem) => {
+  elem.style.display = "flex";
+  elem.style.flexDirection = "column";
+  elem.style.listStyle = "none";
+  elem.style.marginBottom = "20px";
+})
 
-// const listImages = document.querySelector(".gallery");
-
-// const makeGallery = pictures => {
-//   return images.map(picture => {
-//     const imageEl = document.createElement("img");
-//     imageEl.src = picture.url;
-//     imageEl.alt = picture.alt;
-//     imageEl.style.width = '650px';
-//     imageEl.style.margin = '20px';
-    
-//     return imageEl;
-//   });
-  
-// };
-
-// const elements = makeGallery(images);
-// listImages.insertAdjacentHTML(beforeend, '<img src= "${picture.url}" alt="${picture.alt}">');
-
-
-
-
-
-// const listImages = document.querySelector(".gallery");
-
-// const elements = images.map(picture => {
-//     const imageEl = document.createElement("img");
-//     imageEl.src = picture.url;
-//     imageEl.alt = picture.alt;
-//     imageEl.style.width = '650px';
-//     imageEl.style.margin = '20px';
-    
-//     return imageEl;
-//   });
-
-// console.log(elements);
-// listImages.append(...elements);
-
-
-// const makeGallery = pictures => {
-//   return images.map(picture => {
-//     const imageEl = document.createElement("img");
-//     imageEl.src = picture.url;
-//     imageEl.alt = picture.alt;
-//     imageEl.style.width = '650px';
-//     imageEl.style.margin = '20px';
-    
-//     return imageEl;
-//   });
-// };
-
-// const elements = makeGallery(images);
-// listImages.append(...elements);
-
-
-
-
-
+ 
