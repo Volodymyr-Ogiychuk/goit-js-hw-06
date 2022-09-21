@@ -12,6 +12,7 @@ textInput.addEventListener("blur", () => {
         console.log(textInput.classList);
         
     } else {
+        textInput.classList.remove("valid")
         textInput.classList.add("invalid");
         if (textInput.value.length === 0) {
             textInput.classList.remove("invalid", "valid")
